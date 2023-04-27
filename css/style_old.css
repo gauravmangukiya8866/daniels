@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+body {
+    line-height: 28px;
+}
+
+.container {
+    padding: 0 100px;
+}
+
+.spacer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.flex_wrap {
+    flex-wrap: wrap;
+}
+
+.text_end {
+    text-align: right;
+}
+
+.flex {
+    display: flex;
+}
+
+:root {
+    --montserrat_fonts: 'Montserrat', sans-serif;
+    --poppins_fonts: 'poppins', sans-serif;
+    --text-color: #748182;
+    --text-heading: #343434;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; */
+/* ===================================================================================================
+                            strat-header
+=================================================================================================== */
+.bgtheme {
+    background-image: url(..//images/asset\ 12.jpeg);
+    height: 100vh;
+    position: relative;
+}
+
+.bgtheme::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.main_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+    padding: 20px 0;
+
+}
+
+.main_logo a {
+    font-family: var(--montserrat_fonts);
+    font-size: 30PX;
+    color: #fff;
+    font-weight: 600;
+}
+
+.main_menu {
+    display: flex;
+    font-family: var(--poppins_fonts);
+}
+
+.main_menu li {
+    display: block;
+    padding: 10px 20px;
+}
+
+.main_menu li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ===================================================================================================
+                            end-header
+=================================================================================================== */
+
+/* ===================================================================================================
+                            strat-banner
+=================================================================================================== */
+.banner_heading {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-family: var(--montserrat_fonts);
+    text-align: center;
+}
+
+.b_hello {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.b_design {
+    font-size: 55px;
+    margin: 45px 0;
+    font-weight: 300;
+}
+
+.social_icon {
+    display: flex;
+    justify-content: center;
+}
+
+.social_icon li a {
+    display: block;
+    margin: 5px;
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* ===================================================================================================
+                            end-banner
+=================================================================================================== */
+/* ===================================================================================================
+                            start about
+=================================================================================================== */
+.about_img {
+    width: 40%;
+    padding: 30px;
+}
+
+.about_content {
+    width: 60%;
+    padding: 30px;
+    font-family: var(--poppins_fonts);
+}
+
+.about_content h3 {
+    font-family: var(--montserrat_fonts);
+    font-size: 28px;
+    font-weight: bold;
+    color: #343434;
+    margin-bottom: 5px;
+}
+
+.about_content span {
+    color: #999999;
+    font-size: 16px;
+}
+
+.about_content p {
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.skill {
+    margin-top: 30px;
+}
+
+.skill li {
+    margin: 25px 0;
+    padding-left: 10px;
+    background-color: #F7F7F7;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1) inset;
+    color: #fff;
+    position: relative;
+}
+
+/* .skill li::before{
+    content: '';
+    width: 90%;
+    height: 100%;
+    background-color: #1c1c1c;
+    position: absolute;
+    border-radius: 6px;
+    top: 0;
+    left: 0;
+} */
+.skill {
+    color: #fff;
+    position: relative;
+    z-index: 9999;
+    font-size: 14px;
+}
+
+.design,
+.branding,
+.devlop {
+    position: relative;
+}
+
+.design::before,
+.devlop::before {
+    content: '';
+    width: 90%;
+    height: 100%;
+    background-color: #1c1c1c;
+    position: absolute;
+    border-radius: 6px;
+    top: 0;
+    left: 0;
+}
+
+.branding::before {
+    content: '';
+    width: 80%;
+    height: 100%;
+    background-color: #1c1c1c;
+    position: absolute;
+    border-radius: 6px;
+    top: 0;
+    left: 0;
+}
+
+.skill li span {
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    z-index: 9999;
+}
+
+.pre {
+    margin-left: 75%;
+}
+
+.pre_80 {
+    margin-left: 67%;
+}
+
+.about_btn {
+    margin-top: 60px;
+}
+
+.down_btn {
+    padding: 10px 30px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.cont_btn {
+    padding: 10px 30px;
+    border: 1px solid #1c1c1c;
+    color: #000;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.down_btn:hover {
+    background-color: #fff;
+    border: 1px solid #1c1c1c;
+    color: #000;
+}
+
+.cont_btn:hover {
+    background-color: #1c1c1c;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+/* ===================================================================================================
+                            end about
+=================================================================================================== */
+/* ===================================================================================================
+                            start services
+=================================================================================================== */
+
+.bgservices {
+    background-color: #F7F7F7;
+}
+
+.services_heading h2 {
+    font-size: 40px;
+    font-family: var(--montserrat_fonts);
+    color: var(--text-heading);
+    text-align: center;
+    margin-bottom: 50px;
+    ;
+    font-weight: bold;
+}
+
+.single_services {
+    height: 300px;
+    width: calc(33.33% - 40px);
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    padding: 40px;
+    text-align: center;
+    margin: 20px;
+}
+
+.s_icon {
+    height: 70px;
+    width: 70px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 24px;
+    margin: auto;
+    transition: .5s;
+
+}
+
+.single_services>h2 {
+    font-family: var(--montserrat_fonts);
+    font-size: 20px;
+    color: var(--text-heading);
+    font-weight: bolder;
+    margin: 20px 0;
+}
+
+.single_services p {
+    font-family: var(--poppins_fonts);
+    color: var(--text-color);
+    font-size: 14px;
+    text-align: center;
+}
+
+.single_services:hover .s_icon {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+/* ===================================================================================================
+                            end services
+=================================================================================================== */
+/* ===================================================================================================
+                            start protfolio
+=================================================================================================== */
+.prtfolio_nav {
+    margin: 20px 0;
+}
+
+.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.pro_nav {
+    justify-content: center;
+}
+
+.pro_nav li a {
+    padding: 10px 15px;
+    color: var(--text-heading);
+    /* font-weight: bold; */
+    font-family: var(--poppins_fonts);
+    font-size: 16px;
+
+}
+
+.single_protfolio {
+    height: 300px;
+    width: calc(33.33% - 40px);
+    margin: 20px;
+    border: 3px solid transparent;
+    position: relative;
+}
+/* .single_protfolio:hover{
+    border: 3px solid #748182;
+} */
+.hvr_white {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: -10px;
+    opacity: 0;
+    left: 0;
+    transition: .5s;
+    border: 5px solid #999999;
+}
+
+.hvr_white:hover{
+    bottom: 0;
+    opacity: 1;
+}
+.hvr_white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hvr_white div > h2 {
+    font-size: 14px;
+    font-family: var(--poppins_fonts);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-heading);
+}
+
+.pro_icon {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pro_icon li  a{
+    padding: 10px;
+    margin: 5px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    background-color: #1c1c1c;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+.pro_icon li:hover a{
+    background-color: #fff;
+    border: 1px solid #1c1c1c;
+    color: #000;
+}
+/* ===================================================================================================
+                            end protfolio
+=================================================================================================== */
+/* ===================================================================================================
+                            start testimonial
+=================================================================================================== */
+
+.bgtestimonial{
+    background-color: #F7F7F7;
+}
+.main_content{
+    text-align: center;
+    padding: 10px;
+}
+.test_pro_img{
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+.test_content > p{
+    font-family: var(--poppins_fonts);
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0 200px;
+    margin: 10px 0;
+}
+.test_content > h3{
+    color: var(--text-heading);
+    font-family: var(--montserrat_fonts);
+    font-size: 14px;
+}
+.test_content >span{
+    font-family: var(--poppins_fonts);
+    color: var(--text-color);
+    font-weight: normal;
+    font-size: 12px;
+}
+/* ===================================================================================================
+                            end testimonial
+=================================================================================================== */
+/* ===================================================================================================
+                            start number
+=================================================================================================== */
+.main_number{
+    justify-content: space-around;
+}
+.single_number{
+    padding: 10px;
+    text-align: center;
+}
+.single_number > i{
+    font-size: 30px;
+    color: #343434;
+}
+.single_number > h2{
+    font-family: var(--montserrat_fonts);
+    color: var(--text-heading);
+    font-weight: bold;
+    font-size: 28px;
+    padding: 10px 0;
+
+}
+.single_number > span{
+    font-family: var(--poppins_fonts);
+    font-size: 14px;
+}
+
+/* ===================================================================================================
+                            end number
+=================================================================================================== */
+/* ===================================================================================================
+                            start blog
+=================================================================================================== */
+.single_blog{
+    background-color: #fff;
+    font-family: var(--poppins_fonts);
+}
+.blog_img {
+    overflow: hidden;
+}
+.blog_img > img{
+    transition: .5s;
+}
+.blog_img:hover > img{
+    transform: scale(1.1);
+}
+.blog_content{
+    padding: 10px 30px;
+}
+.blog_content > h5{
+    color: var(--text-color);
+    
+    font-size: 12px;
+    font-weight: normal;
+}
+.blog_content > h2{
+    color: #343434;
+    font-family: var(--montserrat_fonts);
+    /* font-size: 12px; */
+    font-weight: bold;
+    margin: 15px 0;
+}
+.blog_content >a {
+    color: #343434;
+    font-weight: normal;
+    border-bottom: 1px solid #343434;
+}
+/* ===================================================================================================
+                            end blog
+=================================================================================================== */
+/* ===================================================================================================
+                            start contact
+=================================================================================================== */
+
+.contact_icon{
+    height: 80px;
+    width: 80px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    font-size: 25px;
+    text-align: center;
+    line-height: 80px;
+    margin: auto;
+}
+.single_contact{
+    text-align: center;
+    width: 33.33%;
+}
+.single_contact > h4{
+    font-family: var(--montserrat_fonts);
+    color: var(--text-heading);
+    font-size: 18px;
+    margin: 10px 0 ;
+}
+.single_contact > p{
+    font-family: var(--poppins_fonts);
+    color: var(--text-color);
+    font-size: 14px;
+}
+.blog_info{
+    margin-top: 50px;
+   
+}
+.name,.email{
+    height: 40px;
+    width: 50%;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin: 10px;
+    outline: none;
+    padding-left: 15px;
+    font-family: var(--poppins_fonts);
+    font-size: 14px;
+}
+.address{
+    outline: none;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius:  5px;
+    width: 100%;
+    margin: 10px;
+    padding: 15px;
+    font-family: var(--poppins_fonts);
+
+}
+/* ===================================================================================================
+                            end contact
+=================================================================================================== */
+/* ===================================================================================================
+                            start footer
+=================================================================================================== */
+.bgfooter{
+    background-color: #1c1c1c;
+    color: #748182;
+    font-family: var(--poppins_fonts);
+    font-size: 12px;
+    padding: 35px 50px;
+    text-align: center;
+}
+
+/* ===================================================================================================
+                            end footer
+=================================================================================================== */
