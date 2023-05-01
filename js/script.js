@@ -80,11 +80,11 @@ $(window).scroll(function () {
     var sticky = $('.nav_bg'),
         scroll = $(window).scrollTop();
 
-    if (scroll >= 550) sticky.addClass('fixed');
+    if (scroll >= 400) sticky.addClass('fixed');
     else sticky.removeClass('fixed');
 
-    if (scroll >= 550) {
-        $('.nav_bg').css({ "background-color": "#1c1c1c" });
+    if (scroll >= 400) {
+        $('.nav_bg').css({ "background-color": "#000"});
     }
     else
     {
@@ -118,11 +118,37 @@ $(document).ready(function(){
 
     })
 
+    setTimeout(function(){
 
+        $('.pre-loder').fadeOut();
+
+    },1000);
+
+    // new WOW().init();
+
+    AOS.init();
 })
 
-$(document).ready(function(){
+// init Isotope
+var $grid = $('.grid').isotope({
+    // options
+  });
+  // filter items on button click
+  $('.filter-button-group').on( 'click', 'li', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
 
-    $()
+    $('.filter-button-group').find('li').removeClass('pot_active')
+    $(this).addClass('pot_active');
 
-});
+    $('.active_navigation').find('li').removeClass('nav_active')
+    $(this).addClass('nav_active');
+  });
+
+  $('.active_navigation').on( 'click', 'li', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+
+    $('.active_navigation').find('li').removeClass('nav_active')
+    $(this).addClass('nav_active');
+  });

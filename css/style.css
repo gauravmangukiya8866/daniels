@@ -101,6 +101,28 @@ button:focus:not(:focus-visible){
     /* background-color: transparent; */
 }
 
+.navbar-nav li:hover a{
+    /* border-bottom: 1px solid #F7F7F7; */
+    color: #fff;
+}
+.active_navigation li{
+    position: relative;
+}
+.active_navigation li.nav_active::before{
+    width: 80%;
+}
+.active_navigation li::before{
+    content: '';
+    background: #fff;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    transition: .5s;
+}
+
+
 /* ===================================================================================================
                             end-header
 =================================================================================================== */
@@ -256,7 +278,36 @@ button:focus:not(:focus-visible){
 .hvr_inner_icon:hover >a{
     color: #000 !important;
 }
+.filter-button-group>li{
+    cursor: pointer;
+    margin: 15px;
+    /* border-bottom: 2px solid transparent; */
+    transition: .5s;
+}
+/* .filter-button-group li.pot_active,
+.filter-button-group li:hover
+{
+    width: auto;
+    border-bottom: 2px solid #000;
+} */
+.filter-button-group li.pot_active::before{
+    width: 85%;
 
+}
+.filter-button-group li{
+    position: relative; 
+}
+.filter-button-group li::before{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #1c1c1c;
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    transition: .5s;
+
+}
 /* =================================================================================================================
                                     end protfolio
 ================================================================================================================= */
@@ -350,3 +401,54 @@ button:focus:not(:focus-visible){
 .sticky_circle>p{
     line-height: 50px;
 }
+
+/* loder */
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #000 transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .pre-loder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    z-index: 9999;
+  }
+  
